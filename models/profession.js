@@ -1,10 +1,10 @@
-// Model for structuring role table
+// Model for structuring profession  table
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../connection");
 
-class Role extends Model {}
+class Profession extends Model {}
 
-Role.init(
+Profession.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -30,8 +30,8 @@ Role.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Role",
+    modelName: "Profession",
   }
 );
 
-module.exports = Role;
+module.exports = Profession;
