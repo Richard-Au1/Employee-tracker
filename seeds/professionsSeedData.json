@@ -1,42 +1,42 @@
 [
     {
         "title": "Salesperson",
-        "salary": 80000,
+        "salary": 75000,
         "department_id": 4
     },
     {
         "title": "Sales Lead",
-        "salary": 100000,
+        "salary": 110500,
         "department_id": 4
     },
     {
         "title": "Software Engineer",
-        "salary": 120000,
+        "salary": 145000,
         "department_id": 1
     },
     {
         "title": "Lead Engineer",
-        "salary": 150000,
+        "salary": 168000,
         "department_id": 1
     },
     {
         "title": "Accountant",
-        "salary": 125000,
+        "salary": 115000,
         "department_id": 2
     },
     {
         "title": "Account Manager",
-        "salary": 160000,
+        "salary": 140000,
         "department_id": 2
     },
     {
         "title": "Lawyer",
-        "salary": 190000,
+        "salary": 186000,
         "department_id": 3
     },
     {
         "title": "Legal Team Lead",
-        "salary": 250000,
+        "salary": 230000,
         "department_id": 3
     }
 ]

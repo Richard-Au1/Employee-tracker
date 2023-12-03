@@ -29,4 +29,4 @@ Employee.hasOne(Employee, {
     onDelete: "CASCADE",
   });
 
-modules.exports = {Employee, Department, Profession}
+module.exports = {Employee, Department, Profession}

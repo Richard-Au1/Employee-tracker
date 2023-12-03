@@ -17,10 +17,10 @@ Employee.init(
     last_name: {
       type: DataTypes.STRING,
     },
-    role_id: {
+    profession_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "Role",
+        model: "Profession",
         key: "id",
       },
     },

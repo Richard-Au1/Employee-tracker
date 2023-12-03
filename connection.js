@@ -1,6 +1,7 @@
 // Connects JavaScript and Sequelize
-const Sequelize = require("sequelize");
 require("dotenv").config();
+const Sequelize = require("sequelize");
+
 
 var sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -9,7 +10,7 @@ var sequelize = new Sequelize(
   {
     host: "localhost",
     dialect: "mysql",
-    port: 3001,
+    port: 3306,
   }
 );
 
