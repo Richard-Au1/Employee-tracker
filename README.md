@@ -19,6 +19,8 @@ npm i
 ## Usage
 After installing the dependencies, to run the app the user must create the database after logging into their mysql account. The log in command line if the user has a mysql account is "mysql -u root -p" and then they will be prompted to type in their password to finalize logging in. Once logged in, the user must type in the command line "source db/schema.sql" to create the database. The user then should type "quit" to exit mysql. To seed the file, the user needs to type in "npm run seed" to load in the data. The next step would be to type in "node index.js" to start the app. Below shows the functionality of the app and how to use each option available to the user.
 
+https://drive.google.com/file/d/1E_QnsRuOfXqZr_WWzQwoqDPrQ7ZV5eZg/view 
+
 ## License
 This project is licensed under the MIT license.
 
