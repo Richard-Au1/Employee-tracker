@@ -64,19 +64,19 @@ sequelize.sync({ force: false }).then(() => {
   
   // View all Professions
   const viewAllProfessions = () => {
-    var Professions = Profession.findAll({
+    var professions = Profession.findAll({
       raw: true,
       // Joining Department table and Profession table
       include: [{ model: Department }],
     }).then((data) => {
       console.table(
         // Loops through data and returns new object, used to format tables
-        data.map((Profession) => {
+        data.map((profession) => {
           return {
-            id: Profession.id,
-            title: Profession.title,
-            salary: Profession.salary,
-            department: Profession["Department.name"],
+            id: profession.id,
+            title: profession.title,
+            salary: profession.salary,
+            department: profession["Department.name"],
           };
         })
       );
@@ -119,7 +119,6 @@ sequelize.sync({ force: false }).then(() => {
   };
   
   // -------------- ADD -----------------
-  
   // Add department
   const addDepartment = () => {
     // Prompts user for name of new department
@@ -185,14 +184,14 @@ sequelize.sync({ force: false }).then(() => {
   
   // Add employee
   const addEmployee = async () => {
-    let Professions = await Profession.findAll({
+    let professions = await Profession.findAll({
       attributes: [
         ["id", "value"],
         ["title", "name"],
       ],
     });
     // Restructures raw data
-    Professions = Professions.map((Profession) => Profession.get({ plain: true }));
+    professions = professions.map((profession) => profession.get({ plain: true }));
   
     let managers = await Employee.findAll({
       attributes: [
@@ -227,8 +226,8 @@ sequelize.sync({ force: false }).then(() => {
         {
           type: "list",
           message: "New employees Profession?",
-          name: "Profession_id",
-          choices: Professions,
+          name: "profession_id",
+          choices: professions,
         },
         {
           type: "list",
@@ -263,14 +262,14 @@ sequelize.sync({ force: false }).then(() => {
       };
     });
   
-    let Professions = await Profession.findAll({
+    let professions = await Profession.findAll({
       attributes: [
         ["id", "value"],
         ["title", "name"],
       ],
     });
 
-    Professions = Professions.map((Profession) => Profession.get({ plain: true }));
+    professions = professions.map((profession) => profession.get({ plain: true }));
   
     inquirer
       .prompt([
@@ -284,8 +283,8 @@ sequelize.sync({ force: false }).then(() => {
           type: "list",
           message:
             "What Profession would you like to update this employee to?",
-          name: "Profession_id",
-          choices: Professions,
+          name: "profession_id",
+          choices: professions,
         },
       ])
       // Takes in user inputs and adds answers to database
